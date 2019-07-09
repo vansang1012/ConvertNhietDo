@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<h2>Temperature Converter</h2>
+Fahreinheit<input type="number" id="doF" placeholder="Nhập độ F"
+                  oninput="chuyenDoi(this.value)"
+                  onchange="chuyenDoi(this.value)"/><br/>
+
+<p> Celcius : <span id="show"></span></p>
+<script>
+    function chuyenDoi(valNum) {
+        doC = parseFloat(valNum);
+        document.getElementById("show").innerHTML = (doC - 32) / 1.8;
+    }
+
+</script>
+
+</body>
+</html>
